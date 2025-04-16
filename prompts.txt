@@ -1,0 +1,79 @@
+Create a full-stack web application for a Bidirectional Data Ingestion Tool between ClickHouse and Flat Files (e.g., CSV) with the following features:
+
+Backend:
+
+    Language: Preferably Go or Java (Python also acceptable).
+
+    APIs for:
+
+        Connecting to ClickHouse using JWT token authentication (host, port, database, user, token).
+
+        Uploading local flat files (CSV) with delimiter options.
+
+        Listing ClickHouse tables and fetching schema (columns).
+
+        Reading flat file headers to extract columns.
+
+        Allowing selection of columns for ingestion.
+
+        Ingesting data:
+
+            From ClickHouse -> Flat File (selected columns).
+
+            From Flat File -> ClickHouse (selected columns).
+
+            Support batching or streaming for efficiency.
+
+        Displaying total records processed after ingestion.
+
+        Error handling with clear messages.
+
+        (Bonus) Support for multi-table JOINs with input JOIN keys/conditions.
+
+Frontend:
+
+    Use React.js (or plain HTML/CSS/JS).
+
+    Pages/Components:
+
+        Home screen with option to select data direction: ClickHouse → Flat File or Flat File → ClickHouse.
+
+        Connection forms:
+
+            For ClickHouse: Host, Port, DB, User, JWT Token
+
+            For Flat File: File upload, delimiter input
+
+        Load and display table list (ClickHouse) or schema (Flat File)
+
+        Column selection (checkboxes)
+
+        Buttons for actions: Connect, Load Columns, Preview, Start Ingestion
+
+        Display:
+
+            Status messages (Connecting, Ingesting, Completed, Error)
+
+            Total record count after ingestion
+
+            (Optional) First 100 records preview
+
+            (Optional) Progress bar
+
+Other Requirements:
+
+    Include clear error handling in both backend and frontend.
+
+    Use ClickHouse client libraries from https://github.com/ClickHouse.
+
+    Test with example datasets like uk_price_paid and ontime.
+
+    Allow schema mapping between CSV and ClickHouse.
+
+Output:
+
+    Source code structure with README.md (setup + run instructions)
+
+    Backend and frontend code in separate folders
+
+    Include basic UI styling (Tailwind or Bootstrap optional)
